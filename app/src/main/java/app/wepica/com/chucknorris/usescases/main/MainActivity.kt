@@ -2,13 +2,12 @@ package app.wepica.com.chucknorris.usescases.main
 
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
-import android.support.v7.app.AppCompatActivity
 import app.wepica.com.chucknorris.R
 import app.wepica.com.chucknorris.usescases.main.categories.CategoriesFragment
 import app.wepica.com.chucknorris.usescases.main.favorites.FavoritesFragment
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : GlobalActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,5 +40,4 @@ class MainActivity : AppCompatActivity() {
     private fun addFavoritesFragment(){
         supportFragmentManager.beginTransaction().replace(R.id.fragment_container, FavoritesFragment.newInstance()).commit()
     }
-
 }

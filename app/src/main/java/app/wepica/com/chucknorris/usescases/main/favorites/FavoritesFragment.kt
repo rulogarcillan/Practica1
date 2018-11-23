@@ -6,7 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import app.wepica.com.chucknorris.R
+import app.wepica.com.chucknorris.usescases.main.Utils
 import kotlinx.android.synthetic.main.fragment_favorites.view.*
+import android.app.Activity
+
+
 
 class FavoritesFragment : Fragment() {
 
@@ -16,6 +20,7 @@ class FavoritesFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
+        Utils.dialog(activity)
         var view = inflater.inflate(R.layout.fragment_favorites, container, false)
         view.message.text = "favorites"
         return view
