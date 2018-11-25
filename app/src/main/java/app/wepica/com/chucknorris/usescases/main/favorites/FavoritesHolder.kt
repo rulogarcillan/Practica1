@@ -26,7 +26,7 @@ class FavoritesHolder(private val rootView: View, private val adapter: Favorites
         rootView.textJoke.text = joke.value
         setIconFav(rootView, isFavJokes(joke))
 
-        rootView.setOnClickListener {
+        rootView.iconFav.setOnClickListener {
             if (isFavJokes(joke)) {
 
                 deleteJoke(joke)

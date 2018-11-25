@@ -24,7 +24,7 @@ class JokesHolder(private var rootView: View) : RecyclerView.ViewHolder(rootView
         rootView.textJoke.text = joke.value
         setIconFav(rootView, isFavJokes(joke))
 
-        rootView.setOnClickListener {
+        rootView.iconFav.setOnClickListener {
             if (isFavJokes(joke)) {
                 deleteJoke(joke)
                 setIconFav(it, isFavJokes(joke))
