@@ -4,4 +4,7 @@
     <string name="title_categories">Categorías</string>
     <string name="title_favorites">Favoritos</string>
     <string name="title_loading">Cargando ...</string>
+    <string name="title_more_jokes">Dame otra broma de %1$s</string>
+    <string name="title_fav">¡Nuevo favorito!</string>
+    <string name="title_nofav">¡Ya no te quiero!</string>
 </resources>

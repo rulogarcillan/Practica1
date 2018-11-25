@@ -6,6 +6,10 @@ import app.wepica.com.chucknorris.R
 import app.wepica.com.chucknorris.usescases.main.categories.CategoriesFragment
 import app.wepica.com.chucknorris.usescases.main.favorites.FavoritesFragment
 import kotlinx.android.synthetic.main.activity_main.*
+import android.widget.Toast
+import android.R.attr.orientation
+import android.content.res.Configuration
+
 
 class MainActivity : GlobalActivity() {
 
@@ -33,11 +37,21 @@ class MainActivity : GlobalActivity() {
         false
     }
 
-    private fun addCategoriesFragment(){
-        supportFragmentManager.beginTransaction().replace(R.id.fragment_container, CategoriesFragment.newInstance()).commit()
+    private fun addCategoriesFragment() {
+        supportFragmentManager.beginTransaction().replace(R.id.fragment_container, CategoriesFragment.newInstance())
+            .commit()
     }
 
-    private fun addFavoritesFragment(){
-        supportFragmentManager.beginTransaction().replace(R.id.fragment_container, FavoritesFragment.newInstance()).commit()
+    private fun addFavoritesFragment() {
+        supportFragmentManager.beginTransaction().replace(R.id.fragment_container, FavoritesFragment.newInstance())
+            .commit()
+    }
+
+    override fun onConfigurationChanged(newConfig: Configuration) {
+        super.onConfigurationChanged(newConfig)
+        if (navigation.selectedItemId == R.id.navigation_categories) {
+            addCategoriesFragment()
+        }
+
     }
 }
